@@ -27,7 +27,7 @@ for min problem
 """
 
 class GSS:
-    def __init__(self, func, a, b, epsilon=1e-5, find_max=True , no_iter = 3):
+    def __init__(self, func, a, b, epsilon=1e-5, find_max = False , no_iter = 3):
         """
         Initialize the General Golden Section Search.
         
@@ -88,5 +88,5 @@ class GSS:
                     self.f_y = -self.f_y
             if self.no_iter == i :
                 break
-            i += 1
+            i += 1 # 0 , 1 , 2 , 3 
             print(f"Iteration {i}:\na = {self.a}, b = {self.b}\nx = {self.x}, y = {self.y}\nf(x) = {self.f_x}, f(y) = {self.f_y}\n")
